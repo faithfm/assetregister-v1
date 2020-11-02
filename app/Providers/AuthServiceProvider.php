@@ -25,6 +25,13 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        $defined_permissions = ['use-app'];
+
+        // define gates for each permission
+        foreach ($defined_permissions as $permission) {
+            Gate::define($permission, function ($user) use ($permission) {
+                return $user->permissions->firstWhere('permission', $permission) !== null;     // check if the specified permission exists in the current User's UserPermissions model
+            });
+        }
     }
 }

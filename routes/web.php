@@ -15,9 +15,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get( '/', function () {
+    return view('home');
+})->name('home');
 
 // Auth0-related routes.   (Replaces Laravel's default auth routes - normally added with a "Auth::routes();" statement.)
 Route::get('/auth0/callback', 'Auth0\Login\Auth0Controller@callback')->name('auth0-callback');
