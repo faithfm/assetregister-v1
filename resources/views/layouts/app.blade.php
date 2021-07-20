@@ -7,6 +7,8 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <link rel="icon" href="/faithfm-favicon-A.png" type="image/png"/>
+
     {{-- Note: To replace any of the default section-definition in a child blade file, simply define a @section/@endsection with the same name.
          To insert code before/after the default section defined in this app blade template, use "@parent" - see: https://laravel.com/docs/7.x/blade#template-inheritance --}}
 
