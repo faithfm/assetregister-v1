@@ -37,7 +37,9 @@
 			<span class="mx-1 text-body-1 d-none d-sm-flex align-self-center">{{
 				app.user.name
 			}}</span>
-			<v-btn @click="logout()" class="d-flex align-self-center">Logout</v-btn>
+			<v-btn @click="$emit('logout')" class="d-flex align-self-center"
+				>Logout
+			</v-btn>
 		</template>
 	</v-app-bar>
 </template>
