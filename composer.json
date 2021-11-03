@@ -15,7 +15,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "owen-it/laravel-auditing": "^11.0"
+        "owen-it/laravel-auditing": "^11.0",
+        "faithfm/laravel-auth0-pattern": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
@@ -59,5 +60,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
+    },
+    "repositories": {
+        "laravel-auth0-pattern": {
+            "type": "vcs",
+            "url": "https://github.com/faithfm/laravel-auth0-pattern"
+        }
     }
 }
