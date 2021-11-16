@@ -15,6 +15,14 @@ use Illuminate\Http\Request;
 |
 */
 
+// override Nova's login/logout routes
+Route::get('nova/logout', function () {
+    return redirect()->route('logout');
+})->name('nova.logout');
+Route::get('nova/login', function () {
+    return redirect()->route('login');
+})->name('nova.login');
+
 Route::get( '/', function () {
     return view('home');
 })->name('home');

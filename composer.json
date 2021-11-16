@@ -16,7 +16,8 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "owen-it/laravel-auditing": "^11.0",
-        "faithfm/laravel-auth0-pattern": "^1.0"
+        "faithfm/laravel-auth0-pattern": "^1.0",
+        "laravel/nova": "~3.0"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
@@ -62,6 +63,10 @@
         ]
     },
     "repositories": {
+        "nova": {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        },
         "laravel-auth0-pattern": {
             "type": "vcs",
             "url": "https://github.com/faithfm/laravel-auth0-pattern"
