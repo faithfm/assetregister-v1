@@ -13,7 +13,7 @@ class Asset extends Model implements Auditable
 
     /**
      * The primary key associated with the table.
-     * 
+     *
      * This section probably will not be needed with new table
      *
      * @var string
@@ -22,7 +22,7 @@ class Asset extends Model implements Auditable
 
     /**
      * The connection name for the model.
-     * 
+     *
      * This section will not be needed with new table
      *
      * @var string
@@ -33,16 +33,16 @@ class Asset extends Model implements Auditable
      * The table associated with the model.
      *
      * This section will not be needed with new table
-     * 
+     *
      * @var string
      */
     protected $table = 'asset_register';
 
     /**
      * No timestamps for this table
-     *      
+     *
      * This section probably will not be needed with new table
-     * 
+     *
      */
     public $timestamps = false;
 
@@ -64,6 +64,6 @@ class Asset extends Model implements Auditable
      */
     public function comments()
     {
-        return $this->hasMany('App\Models\AssetComments');
+        return $this->hasMany('App\Models\AssetComments', 'internal_id', 'internal_id');
     }
 }

@@ -45,7 +45,7 @@ class AssetComment extends Resource
         return [
             ID::make(__('ID'), 'internal_id')->sortable(),
 
-            BelongsTo::make('Asset', 'internal_id')->sortable(),
+            BelongsTo::make('Asset')->sortable(),
 
             Text::make('Cat')->sortable(),
 

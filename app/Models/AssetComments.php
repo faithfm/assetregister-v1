@@ -13,7 +13,7 @@ class AssetComments extends Model implements Auditable
 
     /**
      * The primary key associated with the table.
-     * 
+     *
      * This section probably will not be needed with new table
      *
      * @var string
@@ -29,7 +29,7 @@ class AssetComments extends Model implements Auditable
 
     /**
      * The connection name for the model.
-     * 
+     *
      * This section will not be needed with new table
      *
      * @var string
@@ -40,16 +40,16 @@ class AssetComments extends Model implements Auditable
      * The table associated with the model.
      *
      * This section will not be needed with new table
-     * 
+     *
      * @var string
      */
     protected $table = 'asset_comments';
 
      /**
      * No timestamps for this table
-     *      
+     *
      * This section probably will not be needed with new table
-     * 
+     *
      */
     public $timestamps = false;
 
@@ -71,6 +71,6 @@ class AssetComments extends Model implements Auditable
      */
     public function asset()
     {
-        return $this->belongsTo('App\Models\Asset');
+        return $this->belongsTo('App\Models\Asset', 'internal_id', 'internal_id');
     }
 }
